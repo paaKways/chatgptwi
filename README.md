@@ -3,13 +3,15 @@
 <img width="500px" src="https://github.com/user-attachments/assets/063a61aa-09ea-44b2-ba8c-3245551c8a9f">
 
 ## Overview
-ChatGPTwi is a web application which allows users to interact with Generative AI (ChatGPT) in a local Ghanaian language (Twi)
+Current LLMs are broad-based and most do not work with Ghanaian local languages like Twi, Ewe/Fon, Ga etc. 
+
+Enter ChatGPTwi! A minimalistic chat-ui style webapp which allows users to interact with Generative AI (ChatGPT) in a local Ghanaian language. Just plug in your API keys and you're good to go! :-D
 
 ## Components
 - Express/Node.js (Backend)
 - ReactJS (Frontend)
 - [GhanaNLP Translation APIs](https://translation.ghananlp.org/apis)
-- [ChatGPT API](https://openai.com/api/) (can be substituted for another generative API service eg Gemini, Claude, Mistral, etc)
+- [ChatGPT API](https://openai.com/api/) (will be able to substitute for another generative API service soon eg Gemini, Claude, Mistral, etc)
 
 ## Setup
 ### 1. Install required dependencies
