@@ -1,5 +1,7 @@
 # ChatGPTwi
 
+<img width="500px" src="https://github.com/user-attachments/assets/063a61aa-09ea-44b2-ba8c-3245551c8a9f">
+
 ## Overview
 ChatGPTwi is a web application which allows users to interact with Generative AI (ChatGPT) in a local Ghanaian language (Twi)
 
