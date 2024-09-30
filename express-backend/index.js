@@ -1,13 +1,13 @@
 const express = require('express')
 const app = express()
 const { OpenAI } = require('openai')
-const { GhanaNLPTranslationAPI } = require('./ghananlp-api')
+const { GhanaNLP } = require('@paakways/ghananlp-node') //require('./ghananlp-api')
 require('dotenv').config()
 
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY
 })
-const ghanaNLPAPI = new GhanaNLPTranslationAPI(process.env.GHANANLP_API_KEY)
+const ghanaNLPAPI = new GhanaNLP(process.env.GHANANLP_API_KEY)
 
 
 app.use(express.json())
@@ -23,12 +23,12 @@ async function getChatGPTResponse(englishText) {
 }
 
 async function translateEnglishToTwi(englishText) {
-    const twiText = await ghanaNLPAPI.translate(englishText, 'en-tw')
+    const twiText = await ghanaNLPAPI.translate({ in: englishText, lang: 'en-tw' })
     return twiText
 }
 
 async function translateTwiToEnglish(twiText) {
-    const englishText = await ghanaNLPAPI.translate(twiText, 'tw-en')
+    const englishText = await ghanaNLPAPI.translate({ in: twiText, lang: 'tw-en' })
     return englishText
 }
 
