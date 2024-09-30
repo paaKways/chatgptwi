@@ -7,7 +7,7 @@ require('dotenv').config()
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY
 })
-const ghanaNLPAPI = new GhanaNLP(process.env.GHANANLP_API_KEY)
+const ghanaNLPAPI = new GhanaNLP(process.env.GHANANLP_API_KEY, 'v1')
 
 
 app.use(express.json())
